@@ -37,8 +37,8 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
     expect(typeof productDetails('Alcool gel', 'Máscara')[0]).toBe('object')
     expect(typeof productDetails('Alcool gel', 'Máscara')[1]).toBe('object')
     expect(productDetails('Alcool gel', 'Máscara')[0]).not.toEqual(productDetails('Alcool gel', 'Máscara')[1])
-    expect(productDetails('Alcool gel', 'Máscara')[0].details.productId).toMatch('123')
-    expect(productDetails('Alcool gel', 'Máscara')[1].details.productId).toMatch('123')
+    expect(productDetails('Alcool gel', 'Máscara')[0].details.productId.endsWith('123')).toBeTruthy()
+    expect(productDetails('Alcool gel', 'Máscara')[1].details.productId.endsWith('123')).toBeTruthy()
     
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se productDetails é uma função.
